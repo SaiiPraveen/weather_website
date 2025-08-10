@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="search-box">
+        <input type="text" placeholder="Enter city name..." id="cityInput">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="weather-container">
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <div class="weather-info" id="weatherInfo">
+            <div class="current-weather">
+                <div class="temperature-container">
+                    <div class="temperature">
+                        <span id="temp">22</span>°C
+                    </div>
+                    <div id="tempAnimation" class="temp-animation"></div>
+                </div>
+
+                <div class="location" id="location">New York, NY</div>
+                <div class="description" id="description">Sunny</div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-eye"></i>
+                    <div class="detail-info">
+                        <span class="label">Visibility</span>
+                        <span class="value" id="visibility">10 km</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div class="detail-info">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="humidity">65%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div class="detail-info">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="windSpeed">15 km/h</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div class="detail-info">
+                        <span class="label">Feels Like</span>
+                        <span class="value" id="feelsLike">25°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hourly-forecast" id="hourlyForecast">
+                <h3>24-Hour Forecast</h3>
+                <div class="forecast-container"></div>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+
+    <div class="weather-animation" id="weatherAnimation"></div>
+</body>
+</html>
